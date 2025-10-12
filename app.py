@@ -20,7 +20,7 @@ app.config.suppress_callback_exceptions = True
 
 
 # Load data from csv
-
+# nuevo comentrio para probar git
 def load_data():
     df = pd.read_csv("datos_energia.csv")
     df["time"] = pd.to_datetime(df["time"], errors="coerce")
@@ -243,6 +243,5 @@ def update_output_div(date, hour, proy):
 
 
 # Run the server
-# Run the server
 if __name__ == "__main__":
-    app.run_server(host="0.0.0.0", debug=True)
+    app.run(debug=True, port=8050)  
